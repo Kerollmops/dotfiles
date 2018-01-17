@@ -7,9 +7,11 @@ export SAVEHIST=$HISTSIZE
 export EDITOR="subl --wait" # sublime text
 
 if [[ $(uname) = 'Darwin' ]] then
-    export OPENSSL_INCLUDE_DIR=$(brew --prefix openssl)/include
-    export OPENSSL_LIB_DIR=$(brew --prefix openssl)/lib
-    export DEP_OPENSSL_INCLUDE=$(brew --prefix openssl)/include
+    if type brew > /dev/null; then
+        export OPENSSL_INCLUDE_DIR=$(brew --prefix openssl)/include
+        export OPENSSL_LIB_DIR=$(brew --prefix openssl)/lib
+        export DEP_OPENSSL_INCLUDE=$(brew --prefix openssl)/include
+    fi
 fi
 
 # aliases
