@@ -91,7 +91,7 @@ zstyle ':vcs_info:*' check-for-changes true
 # my prompt
 setopt PROMPT_SUBST
 function git_branch {
-    local branch=$(git branch --format '%(HEAD) %(objectname:short) %(refname:short)' | sed -n -e 's/^\* \(.*\)/\1/p')
+    local branch=$(git branch --format '%(HEAD) %(objectname:short) %(refname:short)' 2> /dev/null | sed -n -e 's/^\* \(.*\)/\1/p')
     if [[ ! -z $branch ]] then
         echo $branch" "
     fi
