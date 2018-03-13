@@ -122,6 +122,15 @@ function swap_buffer {
 	BUFFER=$tmp_buffer
 }
 
+# remote local branches no longer on remote
+function clear_local_branches() {
+    if [ -n "$EDITOR" ]; then
+        git branch --merged | eval $EDITOR | xargs git branch -d
+    else
+        echo '$EDITOR variable not set'
+    fi
+}
+
 # swap_buffer shortcut
 zle -N swap_buffer
 bindkey '^B' swap_buffer
