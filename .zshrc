@@ -21,14 +21,17 @@ fi
 # aliases
 if type exa > /dev/null; then
     alias ls='exa'
+    alias ll='ls -la --git'
+    alias l='ll'
+else
+    alias ll='ls -laG'
+    alias l='ll'
 fi
 
 if type rg > /dev/null; then
     alias grep='rg'
 fi
 
-alias ll='ls -la --git'
-alias l='ll'
 alias gs="git log --oneline --decorate -8 2> /dev/null && echo; git status"
 alias gc="git commit"
 alias gp="git push"
