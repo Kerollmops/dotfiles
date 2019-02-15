@@ -14,6 +14,10 @@ if [[ $(uname) = 'Darwin' ]] then
     fi
 fi
 
+if type sccache > /dev/null; then
+    export RUSTC_WRAPPER=sccache
+fi
+
 # aliases
 if type exa > /dev/null; then
     alias ls='exa'
