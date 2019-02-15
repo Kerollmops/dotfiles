@@ -131,12 +131,8 @@ function swap_buffer {
 }
 
 # remote local branches no longer on remote
-function clear_local_branches() {
-    if [ -n "$EDITOR" ]; then
-        git branch --merged | eval $EDITOR | xargs git branch -d
-    else
-        echo '$EDITOR variable not set'
-    fi
+function git_clear_local_branches() {
+    git branch --merged >/tmp/merged-branches && subl --wait /tmp/merged-branches && nocorrect xargs git branch -d </tmp/merged-branches
 }
 
 # swap_buffer shortcut
