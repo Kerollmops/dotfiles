@@ -36,6 +36,7 @@ alias gs="git log --oneline --decorate -8 2> /dev/null && echo; git status"
 alias gc="git commit"
 alias gp="git push"
 alias ga="git add"
+alias gd="git diff"
 
 # setup history
 setopt hist_ignore_all_dups
