@@ -125,9 +125,9 @@ export PROMPT='%F{red}%(?..%? )'\
 
 # swap buffer
 function swap_buffer {
-	local tmp_buffer=$SWAP_BUFFER
-	SWAP_BUFFER=$BUFFER
-	BUFFER=$tmp_buffer
+    local tmp_buffer=$SWAP_BUFFER
+    SWAP_BUFFER=$BUFFER
+    BUFFER=$tmp_buffer
 }
 
 # remote local branches no longer on remote
