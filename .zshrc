@@ -87,7 +87,7 @@ setopt extendedglob
 zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
 
 # command correction
-setopt correctall
+# setopt correctall
 
 # setup prompt
 autoload -Uz vcs_info
