@@ -14,9 +14,9 @@ if [[ $(uname) = 'Darwin' ]] then
     fi
 fi
 
-if type sccache > /dev/null; then
-    export RUSTC_WRAPPER=sccache
-fi
+# if type sccache > /dev/null; then
+#     export RUSTC_WRAPPER=sccache
+# fi
 
 # aliases
 if type exa > /dev/null; then
@@ -30,6 +30,7 @@ fi
 
 if type rg > /dev/null; then
     alias grep='rg'
+    alias vrg='rg --vimgrep'
 fi
 
 alias gs="git log --oneline --decorate -8 2> /dev/null && echo; git status"
@@ -65,8 +66,8 @@ bindkey "\e\e[D" backward-word
 bindkey "\e\e[C" forward-word
 
 # Completion
-# https://github.com/Homebrew/homebrew-completions
-fpath=($HOME/completion $HOME/.brew/share/zsh/site-functions $HOME/.brew/share/zsh-completions $fpath)
+fpath+=$HOME/.zfunc
+
 autoload -U compinit
 compinit
 
