@@ -31,6 +31,7 @@ fi
 if type rg > /dev/null; then
     alias grep='rg'
     alias vrg='rg --vimgrep'
+    alias vlrg='rg -F --vimgrep'
 fi
 
 alias gs="git log --oneline --decorate -8 2> /dev/null && echo; git status"
