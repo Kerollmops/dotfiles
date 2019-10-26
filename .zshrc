@@ -57,10 +57,15 @@ bindkey '\e[3~' delete-char
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
-# edit command in emacs
+# edit command in EDITOR
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^[e" edit-command-line
+
+# edit current working files in EDITOR
+bulk_rename() { bulk-rename }
+zle -N bulk_rename
+bindkey "^[r" bulk_rename
 
 # move word
 bindkey "\e\e[D" backward-word
