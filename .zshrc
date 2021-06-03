@@ -151,3 +151,7 @@ bindkey '^N' beep
 
 # live command color
 source ~/zsh-syntax-highlighting.zsh
+if [ -e /Users/clementrenault/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/clementrenault/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# Helps MeiliSearch avoid redownloading the datasets
+export MILLI_BENCH_DATASETS_PATH=$HOME/meili-datasets
