@@ -1,0 +1,5 @@
+{
+    "rust_syntax_hide_warnings": true,
+    // "rust_message_status_bar_chars": [" 🌑", " 🌘", " 🌗", " 🌖", " 🌕", " 🌔", " 🌓", " 🌒"]
+    "rust_message_status_bar_chars": [" ⚽️", " 🏀", " 🏈", " ⚾️", " 🥎", " 🎾", " 🏐", " 🏉", " 🥏", " 🎱"]
+}
