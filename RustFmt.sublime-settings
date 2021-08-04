@@ -1,0 +1,5 @@
+// RustFmt Settings - User
+{
+    "executable": ["rustup", "run", "nightly", "rustfmt"],
+    "format_on_save": true
+}
