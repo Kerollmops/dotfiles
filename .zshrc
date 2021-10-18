@@ -21,10 +21,10 @@ fi
 # aliases
 if type exa > /dev/null; then
     alias ls='exa'
-    alias ll='ls -la --git'
+    alias ll='ls -lah --git'
     alias l='ll'
 else
-    alias ll='ls -laG'
+    alias ll='ls -laGh'
     alias l='ll'
 fi
 
@@ -155,3 +155,5 @@ if [ -e /Users/clementrenault/.nix-profile/etc/profile.d/nix.sh ]; then . /Users
 
 # Helps MeiliSearch avoid redownloading the datasets
 export MILLI_BENCH_DATASETS_PATH=$HOME/meili-datasets
+# Increase the maximum number of opened files by process
+ulimit -Sn 5000
