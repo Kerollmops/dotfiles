@@ -155,5 +155,7 @@ if [ -e /Users/clementrenault/.nix-profile/etc/profile.d/nix.sh ]; then . /Users
 
 # Helps MeiliSearch avoid redownloading the datasets
 export MILLI_BENCH_DATASETS_PATH=$HOME/meili-datasets
+# Ask MeiliSearch not to send analytics
+export MEILI_NO_ANALYTICS=true
 # Increase the maximum number of opened files by process
 ulimit -Sn 5000
