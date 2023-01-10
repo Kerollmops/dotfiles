@@ -159,3 +159,10 @@ export MILLI_BENCH_DATASETS_PATH=$HOME/meili-datasets
 export MEILI_NO_ANALYTICS=true
 # Increase the maximum number of opened files by process
 ulimit -Sn 5000
+
+# bun completions
+[ -s "/Users/clementrenault/.bun/_bun" ] && source "/Users/clementrenault/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
