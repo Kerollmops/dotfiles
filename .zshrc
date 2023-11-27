@@ -4,7 +4,7 @@
 export HISTFILE=~/.zsh_history
 export HISTSIZE=2000
 export SAVEHIST=$HISTSIZE
-export EDITOR="subl --wait" # sublime text
+export EDITOR="zed --wait"
 
 if [[ $(uname) = 'Darwin' ]] then
     if type brew > /dev/null; then
@@ -39,6 +39,10 @@ alias gc="git commit"
 alias gp="git push"
 alias ga="git add"
 alias gd="git diff"
+
+# meilisearch
+export MEILI_NO_ANALYTICS
+ulimit -Sn 8000
 
 # setup history
 setopt hist_ignore_all_dups
@@ -166,3 +170,15 @@ ulimit -Sn 5000
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Wasmer
+export WASMER_DIR="/Users/clementrenault/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+# common C header files
+export CPATH="$(xcrun --show-sdk-path)/usr/include"
+
+# Setup homebrew
+if type brew > /dev/null; then
+    eval "$($HOME/homebrew/bin/brew shellenv)"
+fi
