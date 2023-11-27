@@ -1,0 +1,19 @@
+[core]
+	editor = zed --wait
+[alias]
+	ls = log --oneline --decorate --graph -8
+	la = log --oneline --decorate --graph --all
+	ll = log --oneline --decorate --graph --all -16
+[user]
+	signingkey = E3AE5F5F
+	name = Clément Renault
+	email = clement@meilisearch.com
+[commit]
+	gpgsign = true
+[pull]
+    rebase = true
+[push]
+    default = current
+    autosetupremote = true
+[diff]
+	noprefix = true
